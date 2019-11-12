@@ -19,6 +19,8 @@
 
         <!-- jpa -->
         <module>springboot-thymeleaf-jpa</module>
+        <!-- mybatis-plus -->
+        <module>springboot-mysql-mybatis-plus</module>
 
     </modules>
 
