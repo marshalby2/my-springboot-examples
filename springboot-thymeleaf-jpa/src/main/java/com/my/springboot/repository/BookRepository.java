@@ -1,4 +1,4 @@
-package com.my.springboot.reponsitory;
+package com.my.springboot.repository;
 
 import com.my.springboot.domain.Book;
 import org.springframework.data.jpa.repository.JpaRepository;

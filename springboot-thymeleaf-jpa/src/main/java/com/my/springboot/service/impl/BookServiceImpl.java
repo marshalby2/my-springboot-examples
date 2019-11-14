@@ -1,6 +1,6 @@
 package com.my.springboot.service.impl;
 
-import com.my.springboot.reponsitory.BookRepository;
+import com.my.springboot.repository.BookRepository;
 import com.my.springboot.domain.Book;
 import com.my.springboot.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
