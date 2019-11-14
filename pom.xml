@@ -14,18 +14,6 @@
     <name>my-springboot-examples</name>
     <description>Demo project for Spring Boot</description>
 
-    <modules>
-        <!-- 数据库相关 -->
-
-        <!-- jpa -->
-        <module>springboot-thymeleaf-jpa</module>
-        <!-- mybatis-plus -->
-        <module>springboot-mysql-mybatis-plus</module>
-        <!-- redis -->
-        <module>springboot-cache-jpa-redis</module>
-
-    </modules>
-
     <build>
         <plugins>
             <plugin>
@@ -34,5 +22,20 @@
             </plugin>
         </plugins>
     </build>
+
+    <modules>
+        <!-- 数据库相关 -->
+
+        <!-- jpa -->
+        <module>springboot-thymeleaf-jpa</module>
+        <!-- mybatis-plus -->
+        <module>springboot-mysql-mybatis-plus</module>
+        <!-- cache jpa redis -->
+        <module>springboot-cache-jpa-redis</module>
+        <!-- cache mybatis-plus redis -->
+        <module>springboot-cache-mybatis-plus-redis</module>
+
+
+    </modules>
 
 </project>
