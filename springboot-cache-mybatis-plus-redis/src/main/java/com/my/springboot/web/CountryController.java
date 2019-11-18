@@ -21,8 +21,8 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("country")
 public class CountryController {
-    private final static String cacheName = "fruit";
-    private final static String cachePageName = "fruit:page";
+    private final static String cacheName = "country";
+    private final static String cachePageName = "country:page";
 
     @Autowired
     private CountryService service;
@@ -35,7 +35,7 @@ public class CountryController {
 
 
     @GetMapping("/page")
-    @Cacheable(cacheNames = cachePageName, key = "'current' + #current +'size' + #psize")
+    @Cacheable(cacheNames = cachePageName, key = "'current' + #current +'size' + #size")
     public R page(int current, int size) {
         Page<Country> page = new Page<>();
         page.setCurrent(current);

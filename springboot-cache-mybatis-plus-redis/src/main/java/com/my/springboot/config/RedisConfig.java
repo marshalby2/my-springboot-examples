@@ -3,6 +3,7 @@ package com.my.springboot.config;
 import org.springframework.cache.CacheManager;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
@@ -21,8 +22,7 @@ import java.time.Duration;
  * @Author marshal
  * @Date 11/12/19 10:03 PM
  */
-//@Configuration
-@EnableCaching
+@Configuration
 public class RedisConfig {
 
 
