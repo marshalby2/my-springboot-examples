@@ -6,6 +6,10 @@ import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.my.springboot.domain.MpUser;
 import com.my.springboot.service.MpUserService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +18,8 @@ import org.springframework.web.bind.annotation.*;
  * @Author marshal
  * @Date 11/12/19 9:09 AM
  */
+@Api(tags = "user", value = "用户管理接口")
+@RequestMapping("/user")
 @RestController
 public class MpUserController {
 
@@ -21,13 +27,15 @@ public class MpUserController {
     private MpUserService service;
 
     @GetMapping("/page")
+    @ApiOperation(value = "用户分页查询")
     public R page(Page<MpUser> page) {
         IPage<MpUser> iPage = this.service.page(page, Wrappers.emptyWrapper());
         return R.ok(iPage);
     }
 
-    @GetMapping("/queryById")
-    public R queryById(Long id) {
+    @GetMapping("/queryById/{id}")
+    @ApiOperation(value = "根据ID查询用户")
+    public R queryById(@PathVariable Long id) {
         return R.ok(this.service.getById(id));
     }
 
@@ -37,11 +45,13 @@ public class MpUserController {
     }
 
     @PostMapping("/saveOrUpdate")
+    @ApiOperation(value = "更新或保存")
     public R saveOrUpdate(MpUser user){
         return R.ok(this.service.saveOrUpdate(user));
     }
 
     @DeleteMapping("/delete/{id}")
+    @ApiOperation(value = "根据ID删除")
     public R logicDelete(@PathVariable("id") Long id) {
        return R.ok( this.service.removeById(id));
     }
