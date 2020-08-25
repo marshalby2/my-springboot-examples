@@ -30,6 +30,8 @@
         <module>springboot-thymeleaf-jpa</module>
         <!-- mybatis-plus -->
         <module>springboot-mysql-mybatis-plus</module>
+
+        <module>springboot-mysql-mybatis</module>
         <!-- cache jpa redis -->
         <module>springboot-cache-jpa-redis</module>
         <!-- cache mybatis-plus redis -->
