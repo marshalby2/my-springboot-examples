@@ -1,0 +1,30 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: springboot-security
+  datasource:
+    url: jdbc:mysql://127.0.0.1/springboot_test?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+#swagger:
+#  enabled: true
+#  title: springboot-security-API
+#  version: v-1.0.0
+##  authorization:
+##    key-name: book-token
+#  docket:
+#    im-api-api:
+#      title: springboot-security-API
+#      version: v-1.0.0
+#      basePackage: com.my.security.web

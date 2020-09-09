@@ -1,8 +1,8 @@
 package com.my.springboot.domain;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;
 
 /**
@@ -11,7 +11,7 @@ import lombok.Data;
  * @Date 11/12/19 8:38 AM
  */
 @Data
-public class MpUser{
+public class MpUser extends Model<MpUser> {
 
     private Long id;
     private String name;

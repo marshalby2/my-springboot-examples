@@ -37,6 +37,8 @@
         <!-- cache mybatis-plus redis -->
         <module>springboot-cache-mybatis-plus-redis</module>
 
+        <module>springboot-security-jwt</module>
+
 
     </modules>
 
