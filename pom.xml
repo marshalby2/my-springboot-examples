@@ -10,9 +10,46 @@
     </parent>
     <groupId>com.my.springboot</groupId>
     <artifactId>my-springboot-examples</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>my-springboot-examples</name>
-    <description>Demo project for Spring Boot</description>
+
+    <dependencies>
+        <!-- swagger -->
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.7.0.RELEASE</version>
+        </dependency>
+        <!--    web    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--    test    -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--    lombok    -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!-- 解决 Java 高版本报错问题 java.lang.ClassNotFoundException: javax.xml.bind.DatatypeConverter -->
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -36,8 +73,12 @@
         <module>springboot-cache-jpa-redis</module>
         <!-- cache mybatis-plus redis -->
         <module>springboot-cache-mybatis-plus-redis</module>
-
+        <module>springboot-mongodb</module>
+        <!--    安全    -->
         <module>springboot-security-jwt</module>
+        <module>springboot-security</module>
+        <!--    文件    -->
+        <module>springboot-ftp</module>
 
 
     </modules>
