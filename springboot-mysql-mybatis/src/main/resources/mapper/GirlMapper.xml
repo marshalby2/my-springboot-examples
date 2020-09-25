@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.my.springboot.mapper.GirlMapper">
+<mapper namespace="com.my.mapper.GirlMapper">
 
-    <resultMap id="BaseResultMap" type="com.my.springboot.bean.Girl" >
+    <resultMap id="BaseResultMap" type="com.my.bean.Girl" >
         <result column="id" property="id" />
         <result column="name" property="name" />
         <result column="age" property="age" />
@@ -19,7 +19,7 @@
         select * from girl
     </select>
 
-    <insert id="insert" parameterType="com.my.springboot.bean.Girl" >
+    <insert id="insert" parameterType="com.my.bean.Girl" >
         INSERT INTO girl(name, age, address) VALUES(
             #{girl.name},
             #{girl.age},
@@ -27,7 +27,7 @@
         )
     </insert>
 
-    <update id="update" parameterType="com.my.springboot.bean.Girl" >
+    <update id="update" parameterType="com.my.bean.Girl" >
         UPDATE girl
         <set>
             <if test="girl.name != null &amp;&amp; girl.name !=''">

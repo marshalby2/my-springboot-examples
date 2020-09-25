@@ -5,8 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.2.1.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <version>2.3.4.RELEASE</version>
+        <relativePath/>
     </parent>
     <groupId>com.my.springboot</groupId>
     <artifactId>my-springboot-examples</artifactId>
@@ -43,6 +43,11 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <!--   启动类加上@EnableSwagger2Doc注解后,如果不加validation这个依赖,启动会失败,目前原因不明     -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
         <!-- 解决 Java 高版本报错问题 java.lang.ClassNotFoundException: javax.xml.bind.DatatypeConverter -->
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -75,7 +80,6 @@
         <module>springboot-cache-mybatis-plus-redis</module>
         <module>springboot-mongodb</module>
         <!--    安全    -->
-        <module>springboot-security-jwt</module>
         <module>springboot-security</module>
         <!--    文件    -->
         <module>springboot-ftp</module>
