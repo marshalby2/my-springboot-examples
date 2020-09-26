@@ -67,18 +67,21 @@
 
     <modules>
         <!-- 数据库相关 -->
-
         <!-- jpa -->
         <module>springboot-thymeleaf-jpa</module>
         <!-- mybatis-plus -->
         <module>springboot-mysql-mybatis-plus</module>
-
         <module>springboot-mysql-mybatis</module>
         <!-- cache jpa redis -->
         <module>springboot-cache-jpa-redis</module>
         <!-- cache mybatis-plus redis -->
         <module>springboot-cache-mybatis-plus-redis</module>
+        <!--    mongodb    -->
         <module>springboot-mongodb</module>
+        <!--    elasticsearch    -->
+        <module>springboot-elasticsearch</module>
+
+
         <!--    安全    -->
         <module>springboot-security</module>
         <!--    文件    -->
