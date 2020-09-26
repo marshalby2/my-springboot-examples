@@ -1,13 +1,15 @@
 package com.my;
 
+import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SrpingbootElasticsearchApplication {
+@EnableSwagger2Doc
+public class SpringBootElasticsearchApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SrpingbootElasticsearchApplication.class, args);
+        SpringApplication.run(SpringBootElasticsearchApplication.class, args);
     }
 
 }

@@ -1,6 +1,7 @@
 package com.my.service;
 
 import com.my.bean.Poem;
+import org.springframework.data.domain.Page;
 
 /**
  * @Description TODO
@@ -9,8 +10,15 @@ import com.my.bean.Poem;
  */
 public interface PoemService {
 
-    public void save(Poem poem);
+    void save(Poem poem);
 
-    public Poem findByTitle(String title);
+    void delete(Poem poem);
+
+    Poem findById(Long id);
+
+    Iterable<Poem> findAll();
+
+    Page<Poem> page(Integer current, Integer size);
+
 
 }

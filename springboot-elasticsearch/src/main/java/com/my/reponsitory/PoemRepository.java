@@ -8,5 +8,5 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
  * @Author marshal
  * @Date 26/9/20 7:37 PM
  */
-public interface PoemRepository extends ElasticsearchRepository<Poem, Integer> {
+public interface PoemRepository extends ElasticsearchRepository<Poem, Long> {
 }
