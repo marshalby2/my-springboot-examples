@@ -80,6 +80,8 @@
         <module>springboot-mongodb</module>
         <!--    elasticsearch    -->
         <module>springboot-elasticsearch</module>
+        <!--    redis    -->
+        <module>springboot-data-redis</module>
 
 
         <!--    安全    -->
