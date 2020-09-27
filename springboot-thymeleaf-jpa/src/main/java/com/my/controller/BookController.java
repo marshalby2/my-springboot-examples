@@ -1,6 +1,6 @@
-package com.my.web;
+package com.my.controller;
 
-import com.my.domain.Book;
+import com.my.bean.Book;
 import com.my.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

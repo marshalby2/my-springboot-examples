@@ -3,7 +3,7 @@
 <mapper namespace="com.my.mapper.MpUserMapper">
 
 
-    <select id="selectAdult" resultType="com.my.domain.MpUser">
+    <select id="selectAdult" resultType="com.my.bean.MpUser">
         select
             id,name,age,deleted
         from

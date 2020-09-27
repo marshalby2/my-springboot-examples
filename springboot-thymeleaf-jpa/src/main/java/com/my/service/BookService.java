@@ -1,6 +1,6 @@
 package com.my.service;
 
-import com.my.domain.Book;
+import com.my.bean.Book;
 
 import java.util.List;
 

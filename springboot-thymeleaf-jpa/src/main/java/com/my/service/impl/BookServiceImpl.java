@@ -1,7 +1,7 @@
 package com.my.service.impl;
 
 import com.my.repository.BookRepository;
-import com.my.domain.Book;
+import com.my.bean.Book;
 import com.my.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

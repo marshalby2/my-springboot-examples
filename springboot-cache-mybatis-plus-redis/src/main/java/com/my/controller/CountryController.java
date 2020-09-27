@@ -1,9 +1,9 @@
-package com.my.web;
+package com.my.controller;
 
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.my.domain.Country;
+import com.my.bean.Country;
 import com.my.service.CountryService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

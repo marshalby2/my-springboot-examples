@@ -1,6 +1,6 @@
 package com.my.repository;
 
-import com.my.domain.Fruit;
+import com.my.bean.Fruit;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

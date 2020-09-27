@@ -1,6 +1,6 @@
 package com.my;
 
-import com.my.domain.MpUser;
+import com.my.bean.MpUser;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;

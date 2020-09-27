@@ -1,7 +1,7 @@
 package com.my.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.my.domain.MpUser;
+import com.my.bean.MpUser;
 import com.my.mapper.MpUserMapper;
 import com.my.service.MpUserService;
 import org.springframework.beans.factory.annotation.Autowired;

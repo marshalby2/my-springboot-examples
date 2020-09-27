@@ -1,4 +1,4 @@
-package com.my.domain;
+package com.my.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

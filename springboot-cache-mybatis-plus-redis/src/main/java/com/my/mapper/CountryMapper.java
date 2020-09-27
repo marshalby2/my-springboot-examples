@@ -1,7 +1,7 @@
 package com.my.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.my.domain.Country;
+import com.my.bean.Country;
 
 /**
  * @Description TODO

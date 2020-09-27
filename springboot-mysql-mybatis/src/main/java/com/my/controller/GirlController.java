@@ -1,4 +1,4 @@
-package com.my.web;
+package com.my.controller;
 
 import com.my.bean.Girl;
 import com.my.service.GirlService;

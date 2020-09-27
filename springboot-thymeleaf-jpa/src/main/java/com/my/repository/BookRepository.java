@@ -1,6 +1,6 @@
 package com.my.repository;
 
-import com.my.domain.Book;
+import com.my.bean.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

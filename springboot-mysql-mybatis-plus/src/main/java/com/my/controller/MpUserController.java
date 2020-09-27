@@ -1,10 +1,10 @@
-package com.my.web;
+package com.my.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.my.domain.MpUser;
+import com.my.bean.MpUser;
 import com.my.service.MpUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

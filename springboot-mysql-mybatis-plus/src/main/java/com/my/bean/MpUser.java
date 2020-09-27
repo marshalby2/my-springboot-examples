@@ -1,4 +1,4 @@
-package com.my.domain;
+package com.my.bean;
 
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.extension.activerecord.Model;

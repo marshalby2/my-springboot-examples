@@ -1,6 +1,6 @@
-package com.my.web;
+package com.my.controller;
 
-import com.my.domain.Fruit;
+import com.my.bean.Fruit;
 import com.my.service.FruitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;

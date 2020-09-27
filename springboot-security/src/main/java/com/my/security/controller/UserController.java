@@ -1,4 +1,4 @@
-package com.my.security.web;
+package com.my.security.controller;
 
 import com.my.security.bean.SysUser;
 import com.my.security.service.SysUserService;

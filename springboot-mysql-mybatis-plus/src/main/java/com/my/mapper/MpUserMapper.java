@@ -1,7 +1,7 @@
 package com.my.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.my.domain.MpUser;
+import com.my.bean.MpUser;
 
 import java.util.List;
 

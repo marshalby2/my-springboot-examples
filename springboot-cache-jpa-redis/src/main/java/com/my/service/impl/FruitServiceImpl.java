@@ -1,7 +1,7 @@
 package com.my.service.impl;
 
 import com.my.repository.FruitRepository;
-import com.my.domain.Fruit;
+import com.my.bean.Fruit;
 import com.my.service.FruitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;

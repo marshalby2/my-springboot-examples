@@ -1,7 +1,7 @@
 package com.my.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.my.domain.MpUser;
+import com.my.bean.MpUser;
 
 import java.util.List;
 
