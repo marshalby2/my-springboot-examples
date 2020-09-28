@@ -10,12 +10,12 @@ import org.springframework.context.annotation.Configuration;
  * @Date 28/9/20 10:18 AM
  */
 @Configuration
-public class RabbitMQConfig {
+public class WorkQueueConfig {
 
 
     @Bean
-    public Queue queue() {
-        return new Queue("hello");
+    public Queue workQueue() {
+        return new Queue("workQueue");
     }
 
 }
