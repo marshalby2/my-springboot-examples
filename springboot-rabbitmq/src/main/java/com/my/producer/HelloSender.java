@@ -21,8 +21,11 @@ public class HelloSender {
     private RabbitTemplate template;
 
     public void send() {
-        String context = "hello : " + Date.from(Instant.now());
-        log.info("produce: ===============> " + context);
-        template.convertAndSend("hello", context);
+        String message = "hello : " + Date.from(Instant.now());
+        log.info("produce: ===============> " + message);
+        // 参考：<a>https://www.rabbitmq.com/tutorials/tutorial-one-python.html<a/>
+        // The queue name needs to be specified in the routing_key parameter:
+        // convertAndSend函数有三个参数，第一个是交换机名称，如果不给就是默认的；第二个是路由key指队列名称；第三个是消息体
+        template.convertAndSend("hello", message);
     }
 }
