@@ -1,5 +1,6 @@
 package com.my.config;
 
+import org.springframework.amqp.core.Queue;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -10,6 +11,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TopicConfig {
 
-    
+    public Queue topicQueue() {
+        return new Queue("topicQueue");
+    }
 
 }
