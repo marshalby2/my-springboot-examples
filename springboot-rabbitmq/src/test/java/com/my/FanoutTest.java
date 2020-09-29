@@ -16,6 +16,10 @@ public class FanoutTest {
     @Autowired
     private FanoutSender fanoutSender;
 
+    /**
+     *  发布订阅模式
+     *
+     */
     @Test
     public void testFanout() {
         fanoutSender.send();

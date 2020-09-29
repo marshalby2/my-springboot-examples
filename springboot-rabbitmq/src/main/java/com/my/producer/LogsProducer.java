@@ -17,15 +17,12 @@ public class LogsProducer {
 
 
     /**
-     *  根据参数指定routingKey
+     * 根据参数指定routingKey
      *
      * @param type
      */
     public void produce(String type) {
-        switch (type) {
-            case "error" -> template.convertAndSend("directExchange","error", "This is error logs");
-            case "info" -> template.convertAndSend("directExchange","info", "This is info logs");
-        }
+        template.convertAndSend("directExchange", type, "This is " + type + " logs");
     }
 
 }
