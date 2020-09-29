@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 @RabbitListener(queues = "fanoutQueueB")
-public class FanoutReceiverB {
+public class BroadcastReceiverB {
 
     @RabbitHandler
     public void process(String message) {

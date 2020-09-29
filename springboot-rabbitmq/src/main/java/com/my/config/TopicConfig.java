@@ -23,12 +23,12 @@ public class TopicConfig {
 
     @Bean
     public Queue topicQueueA() {
-        return new Queue("topicQueueA");
+        return new Queue("colorQueueA");
     }
 
     @Bean
     public Queue topicQueueB() {
-        return new Queue("topicQueueB");
+        return new Queue("colorQueueB");
     }
 
     @Bean

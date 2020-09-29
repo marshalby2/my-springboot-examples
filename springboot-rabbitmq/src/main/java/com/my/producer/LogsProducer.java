@@ -22,7 +22,7 @@ public class LogsProducer {
      * @param type
      */
     public void produce(String type) {
-        template.convertAndSend("directExchange", type, "This is " + type + " logs");
+        template.convertAndSend("direct.logs", type, "This is " + type + " logs");
     }
 
 }

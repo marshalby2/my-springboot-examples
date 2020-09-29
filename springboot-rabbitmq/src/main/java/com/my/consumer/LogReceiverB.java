@@ -12,12 +12,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-@RabbitListener(queues = "logQueueA")
-public class ErrorLogReceiver {
+@RabbitListener(queues = "logQueueB")
+public class LogReceiverB {
 
     @RabbitHandler
     public void receive(String message) {
-        log.info("error receiver receive : " + message);
+        log.info("mix receiver receive : " + message);
     }
 
 }

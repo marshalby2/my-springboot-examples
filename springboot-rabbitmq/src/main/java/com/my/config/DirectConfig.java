@@ -28,7 +28,7 @@ public class DirectConfig {
 
     @Bean
     public DirectExchange directExchange() {
-        return new DirectExchange("directExchange");
+        return new DirectExchange("direct.logs");
     }
 
 

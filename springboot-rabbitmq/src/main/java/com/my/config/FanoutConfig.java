@@ -12,44 +12,44 @@ import org.springframework.context.annotation.Configuration;
  * @Author marshal
  * @Date 28/9/20 7:53 PM
  *
- * 这种模式就是发布订阅模式
+ * 这种模式就是广播模式
  */
 @Configuration
 public class FanoutConfig {
 
     @Bean
-    public Queue fanoutQueueA() {
-        return new Queue("fanoutQueueA");
+    public Queue broadcastQueueA() {
+        return new Queue("broadcastQueueA");
     }
 
     @Bean
-    public Queue fanoutQueueB() {
-        return new Queue("fanoutQueueB");
+    public Queue broadcastQueueB() {
+        return new Queue("broadcastQueueB");
     }
 
     @Bean
-    public Queue fanoutQueueC() {
-        return new Queue("fanoutQueueC");
+    public Queue broadcastQueueC() {
+        return new Queue("broadcastQueueC");
     }
 
     @Bean
     public FanoutExchange fanoutExchange() {
-        return new FanoutExchange("fanoutExchange");
+        return new FanoutExchange("fanout.broadcast");
     }
 
 
     @Bean
     public Binding bindingExchangeMessageA() {
-        return BindingBuilder.bind(fanoutQueueA()).to(fanoutExchange());
+        return BindingBuilder.bind(broadcastQueueA()).to(fanoutExchange());
     }
 
     @Bean
     public Binding bindingExchangeMessageB() {
-        return BindingBuilder.bind(fanoutQueueB()).to(fanoutExchange());
+        return BindingBuilder.bind(broadcastQueueB()).to(fanoutExchange());
     }
 
     @Bean
     public Binding bindingExchangeMessageC() {
-        return BindingBuilder.bind(fanoutQueueC()).to(fanoutExchange());
+        return BindingBuilder.bind(broadcastQueueC()).to(fanoutExchange());
     }
 }

@@ -1,6 +1,6 @@
 package com.my;
 
-import com.my.producer.FanoutSender;
+import com.my.producer.BroadcastProducer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class FanoutTest {
 
     @Autowired
-    private FanoutSender fanoutSender;
+    private BroadcastProducer fanoutSender;
 
     /**
      *  发布订阅模式

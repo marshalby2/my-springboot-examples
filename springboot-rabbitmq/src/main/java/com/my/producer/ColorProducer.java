@@ -12,14 +12,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-public class TopicProducer {
+public class ColorProducer {
 
     @Autowired
     private RabbitTemplate template;
 
     public void produce(String criteria) {
-//        var strings = criteria.split(".");
-//        StringBuilder sb = new StringBuilder();
         template.convertAndSend("topic.color", criteria, "This is " + criteria);
     }
 

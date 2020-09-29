@@ -8,16 +8,16 @@ import org.springframework.stereotype.Component;
 /**
  * @Description TODO
  * @Author marshal
- * @Date 28/9/20 9:06 PM
+ * @Date 28/9/20 8:38 PM
  */
 @Component
 @Slf4j
-@RabbitListener(queues = "logQueueB")
-public class MixLogReceiver {
+@RabbitListener(queues = "fanoutQueueC")
+public class BroadcastReceiverC {
 
     @RabbitHandler
-    public void receive(String message) {
-        log.info("mix receiver receive : " + message);
+    public void process(String message) {
+        log.info("FanoutReceiverC receive : " + message);
     }
 
 }

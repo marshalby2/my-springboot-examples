@@ -1,6 +1,6 @@
 package com.my;
 
-import com.my.producer.TopicProducer;
+import com.my.producer.ColorProducer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class TopicTest {
 
     @Autowired
-    private TopicProducer topicProducer;
+    private ColorProducer colorProducer;
 
     /**
      * 只有topicQueueA 能收到消息
@@ -23,7 +23,7 @@ public class TopicTest {
     @Test
     public void test1() {
         String criteria = "yellow.blue.red";
-        topicProducer.produce(criteria);
+        colorProducer.produce(criteria);
         // ColorReceiverA receive: This is yellow.blue.red
     }
 
@@ -34,7 +34,7 @@ public class TopicTest {
     @Test
     public void test2() {
         String criteria = "green.blue.red";
-        topicProducer.produce(criteria);
+        colorProducer.produce(criteria);
         // ColorReceiverA receive: This is green.blue.red
         // ColorReceiverB receive: This is green.blue.red
     }

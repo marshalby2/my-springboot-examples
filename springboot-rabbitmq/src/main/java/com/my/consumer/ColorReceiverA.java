@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-@RabbitListener(queues = "topicQueueA")
+@RabbitListener(queues = "colorQueueA")
 public class ColorReceiverA {
 
     @RabbitHandler
