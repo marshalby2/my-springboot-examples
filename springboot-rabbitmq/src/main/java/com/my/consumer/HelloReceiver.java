@@ -17,7 +17,7 @@ import org.springframework.stereotype.Component;
 public class HelloReceiver {
 
     @RabbitHandler
-    public void process(String hello) {
-        log.info("receive : ================> " + hello);
+    public void process(String message) {
+        log.info("hello receive : ================> " + message);
     }
 }

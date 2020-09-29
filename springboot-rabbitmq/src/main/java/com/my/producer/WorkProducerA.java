@@ -15,15 +15,13 @@ import java.time.Instant;
  */
 @Component
 @Slf4j
-public class WorkSender {
+public class WorkProducerA {
 
     @Autowired
     private RabbitTemplate template;
 
-    public void send(int i) {
-//        log.info("WorkSender produce message ******* " + i);
-        template.convertAndSend("workQueue", ("WorkSender send message ******* " + i));
+    public void produce(int i) {
+        template.convertAndSend("workQueue", ("WorkProducerA  message ******* " + i));
     }
-
 }
 

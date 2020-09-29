@@ -1,7 +1,6 @@
 package com.my;
 
-import com.my.consumer.HelloReceiver;
-import com.my.producer.HelloSender;
+import com.my.producer.HelloProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,15 +16,15 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class HelloTest {
 
     @Autowired
-    private HelloSender helloSender;
+    private HelloProducer helloProducer;
 
     @Test
     public void hello() throws Exception{
-        int i = 10;
-        while (i > 0) {
-            helloSender.send();
+        int i = 0;
+        while (i < 10) {
+            helloProducer.produce(i);
             Thread.sleep(3000);
-            i--;
+            i++;
         }
     }
 }

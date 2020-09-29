@@ -5,9 +5,6 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.sql.Date;
-import java.time.Instant;
-
 /**
  * @Description TODO
  * @Author marshal
@@ -15,14 +12,14 @@ import java.time.Instant;
  */
 @Component
 @Slf4j
-public class HelloSender {
+public class HelloProducer {
 
     @Autowired
     private RabbitTemplate template;
 
-    public void send() {
-        String message = "hello : " + Date.from(Instant.now());
-        log.info("produce: ===============> " + message);
+    public void produce(int i) {
+        String message = "hello : " + i;
+        log.info("hello produce: ===============> " + message);
         // 参考：<a>https://www.rabbitmq.com/tutorials/tutorial-one-python.html<a/>
         // The queue name needs to be specified in the routing_key parameter:
         // convertAndSend函数有三个参数，第一个是交换机名称，如果不给就是默认的；第二个是路由key指队列名称；第三个是消息体

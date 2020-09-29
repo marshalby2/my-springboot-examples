@@ -12,12 +12,12 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-@RabbitListener(queues = "fanoutQueueA")
+@RabbitListener(queues = "broadcastQueueA")
 public class BroadcastReceiverA {
 
     @RabbitHandler
     public void process(String message) {
-        log.info("FanoutReceiverA receive : " + message);
+        log.info("BroadcastReceiverA receive : " + message);
     }
 
 }

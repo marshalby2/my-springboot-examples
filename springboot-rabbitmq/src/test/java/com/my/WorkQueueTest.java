@@ -1,7 +1,7 @@
 package com.my;
 
-import com.my.producer.WorkSender;
-import com.my.producer.WorkSenderB;
+import com.my.producer.WorkProducerA;
+import com.my.producer.WorkProducerB;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,9 +19,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class WorkQueueTest {
 
     @Autowired
-    private WorkSender workSender;
+    private WorkProducerA workProducerA;
     @Autowired
-    private WorkSenderB workSenderB;
+    private WorkProducerB workProducerB;
 
     /**
      *  一对多
@@ -35,7 +35,7 @@ public class WorkQueueTest {
     public void oneToMany() {
         int i = 0;
         while (i < 20) {
-            workSender.send(i);
+            workProducerA.produce(i);
             i++;
         }
     }
@@ -49,8 +49,8 @@ public class WorkQueueTest {
     public void manyToMany() {
         int i = 0;
         while (i < 40) {
-            workSender.send(i);
-            workSenderB.send(i);
+            workProducerA.produce(i);
+            workProducerB.produce(i);
             i++;
         }
     }

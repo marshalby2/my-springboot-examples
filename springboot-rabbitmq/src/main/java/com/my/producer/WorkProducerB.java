@@ -12,14 +12,13 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Slf4j
-public class WorkSenderB {
+public class WorkProducerB {
 
     @Autowired
     private RabbitTemplate template;
 
-    public void send(int i) {
-        template.convertAndSend("workQueue", ("WorkSenderB send message ******* " + i));
+    public void produce(int i) {
+        template.convertAndSend("workQueue", ("WorkProducerB  message ******* " + i));
     }
-
 }
 
