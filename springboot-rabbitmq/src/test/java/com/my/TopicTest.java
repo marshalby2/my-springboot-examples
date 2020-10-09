@@ -16,10 +16,6 @@ public class TopicTest {
     @Autowired
     private ColorProducer colorProducer;
 
-    /**
-     * 只有topicQueueA 能收到消息
-     *
-     */
     @Test
     public void test1() {
         String criteria = "yellow.blue.red";
@@ -27,10 +23,6 @@ public class TopicTest {
         // ColorReceiverA receive: This is yellow.blue.red
     }
 
-    /**
-     *  topicQueueA 和 topicQueueB 都能收到消息
-     *
-     */
     @Test
     public void test2() {
         String criteria = "green.blue.red";

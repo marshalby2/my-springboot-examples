@@ -23,11 +23,5 @@ public class FanoutTest {
     @Test
     public void testFanout() {
         fanoutSender.send();
-        /**
-         *  FanoutReceiverA receive : This is a fanout message
-         *  FanoutReceiverB receive : This is a fanout message
-         *  FanoutReceiverC receive : This is a fanout message
-         */
     }
-
 }

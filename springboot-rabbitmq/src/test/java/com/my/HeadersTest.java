@@ -37,5 +37,4 @@ public class HeadersTest {
         imagesProducer.produce(Image.builder().type("jpg").size(6).build());
         // ImageReceiverB receive : Image(type=jpg, size=6)
     }
-
 }

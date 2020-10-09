@@ -19,8 +19,6 @@ public class BroadcastProducer {
 
     public void send() {
         String context = "This is a broadcast message";
-        // 因为我们在配置文件FanoutConfig中已经将队列都绑定在fanoutExchange交换机上了，所以这里的routingKey参数可以为空
         template.convertAndSend("fanout.broadcast","", context);
     }
-
 }

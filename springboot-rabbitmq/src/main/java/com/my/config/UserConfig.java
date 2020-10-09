@@ -29,6 +29,4 @@ public class UserConfig {
     public Binding bindingTopicExchange() {
         return BindingBuilder.bind(userInfo()).to(userTopicExchange()).with("user.info");
     }
-
-
 }

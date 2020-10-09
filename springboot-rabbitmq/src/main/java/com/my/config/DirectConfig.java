@@ -62,6 +62,4 @@ public class DirectConfig {
     public Binding bindingExchangeMixLogsB() {
         return BindingBuilder.bind(logQueueB()).to(directExchange()).with("info");
     }
-
-
 }

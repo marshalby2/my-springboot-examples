@@ -23,16 +23,9 @@ public class DirectTest {
         // error receiver receive : This is error logs
     }
 
-    /**
-     *  只有
-     *
-     */
     @Test
     public void testInfoLog() {
         logsProducer.produce("info");
         // mix receiver receive : This is info logs
     }
-
-
-
 }

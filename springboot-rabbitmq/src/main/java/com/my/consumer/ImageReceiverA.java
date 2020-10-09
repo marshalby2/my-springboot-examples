@@ -19,5 +19,4 @@ public class ImageReceiverA {
     public void receive(byte[] image) {
         log.info("ImageReceiverA receive : " + new String(image));
     }
-
 }
