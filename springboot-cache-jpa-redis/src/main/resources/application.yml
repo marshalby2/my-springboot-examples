@@ -8,7 +8,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-# 下面是Redis的默认配置
+# 下面是Redis的配置
   redis:
     port: 6379
     database: 3

@@ -1,5 +1,6 @@
 package com.my.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.my.bean.Country;
 
@@ -10,4 +11,11 @@ import com.my.bean.Country;
  */
 public interface CountryService extends IService<Country>{
 
+    boolean saveOrUpdate(Country country);
+
+    Country getById(Integer id);
+
+    IPage<Country> page(int current, int size);
+
+    boolean removeById(Integer id);
 }
