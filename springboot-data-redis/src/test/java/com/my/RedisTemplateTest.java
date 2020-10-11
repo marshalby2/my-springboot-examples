@@ -27,7 +27,7 @@ public class RedisTemplateTest {
 
     @Test
     public void testGoodsSave() {
-        var goods = Goods.builder().id(1L).name("运动鞋").brand("LiNing").build();
+        var goods = Goods.builder().id(2L).name("运动鞋").brand("LiNing").build();
         goodsRedisTemplate.opsForValue().set("goods:" + goods.getId(), goods);
     }
 }

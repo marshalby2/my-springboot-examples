@@ -1,5 +1,6 @@
 package com.my.bean;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +20,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-//@JsonIgnoreProperties(value={"hibernateLazyInitializer"})
+@JsonIgnoreProperties(value={"hibernateLazyInitializer"})
 public class Fruit implements Serializable {
     private static final long serialVersionUID = 8752425314417022954L;
     @Id

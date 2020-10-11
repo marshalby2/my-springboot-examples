@@ -45,6 +45,12 @@ public class JpaRedisConfig {
         return redisTemplate;
     }
 
+    /**
+     *  设置缓存管理器
+     *
+     * @param factory
+     * @return
+     */
     @Primary
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory factory) {

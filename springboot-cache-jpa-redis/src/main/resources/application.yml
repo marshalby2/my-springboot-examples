@@ -9,10 +9,10 @@ spring:
     hibernate:
       ddl-auto: update
 # 下面是Redis的默认配置
-#  redis:
-#    port: 6379
-#    database: 0
-#    host: locahost
+  redis:
+    port: 6379
+    database: 3
+    host: localhost
 
 
 

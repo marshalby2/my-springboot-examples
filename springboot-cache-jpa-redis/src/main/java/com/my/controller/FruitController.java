@@ -35,8 +35,6 @@ public class FruitController {
         service.saveOrUpdate(fruit);
     }
 
-
-
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable  Integer id) {
         service.delete(id);
