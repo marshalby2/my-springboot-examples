@@ -44,6 +44,18 @@ public class BookService {
        return mongoTemplate.findOne(Query.query(Criteria.where("name").is(name)), Book.class);
     }
 
+
+    /**
+     * 根据ID查询
+     *
+     * @param id
+     * @return
+     */
+    public Book findById(Integer id) {
+//        return mongoTemplate.findOne(Query.query(Criteria.where("id").is(id)), Book.class);
+        return mongoTemplate.findById(id, Book.class);
+    }
+
     /**
      *  查询所有
      *

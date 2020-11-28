@@ -23,11 +23,11 @@ import java.time.Duration;
  * @Date 11/12/19 10:03 PM
  */
 @Configuration
-public class MybatisRedisConfig {
+public class RedisConfig {
 
 
     /**
-     * 设置序列化器
+     * 自定义RedisTemplate
      *
      * @param connectionFactory
      * @return
@@ -44,6 +44,12 @@ public class MybatisRedisConfig {
         return redisTemplate;
     }
 
+    /**
+     *  配置缓存管理器
+     *
+     * @param factory
+     * @return
+     */
     @Primary
     @Bean
     public CacheManager cacheManager(RedisConnectionFactory factory) {
@@ -76,13 +82,6 @@ public class MybatisRedisConfig {
      * @return
      */
     private RedisSerializer<Object> valueSerializer() {
-
-//        Jackson2JsonRedisSerializer
-//        jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer(Object.class);
-//        ObjectMapper om = new ObjectMapper();
-//        om.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-//        om.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-//        jackson2JsonRedisSerializer.setObjectMapper(om);
        return new GenericJackson2JsonRedisSerializer();
     }
 

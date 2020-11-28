@@ -28,6 +28,12 @@ public class BookController {
         this.bookService.save(book);
     }
 
+    @GetMapping("/getById/{id}")
+    @ApiOperation(value = "根据名称查询")
+    public Book getById(@PathVariable Integer id) {
+        return bookService.findById(id);
+    }
+
     @GetMapping("/getByName/{name}")
     @ApiOperation(value = "根据名称查询")
     public Book getByName(@PathVariable String name) {
