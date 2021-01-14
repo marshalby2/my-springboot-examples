@@ -12,6 +12,7 @@
     <artifactId>my-springboot-examples</artifactId>
     <version>1.0.0</version>
     <name>my-springboot-examples</name>
+    <packaging>pom</packaging>
 
     <dependencies>
         <!-- swagger -->

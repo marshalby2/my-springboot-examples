@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@MapperScan("com.my.springboot.mapper")
+@MapperScan("com.my.mapper")
 @EnableSwagger2
 public class SpringbootMysqlMybatisPlusApplication {
 
