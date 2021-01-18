@@ -44,7 +44,7 @@ public class MpUserController {
 
     @PostMapping("/saveOrUpdate")
     @ApiOperation(value = "更新或保存")
-    public R saveOrUpdate(MpUser user){
+    public R saveOrUpdate(@RequestBody MpUser user){
         return R.ok(this.service.saveOrUpdate(user));
     }
 
