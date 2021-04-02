@@ -4,7 +4,7 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
-# 下面是Redis的默认配置
+# 下面是Redis的配置
   redis:
     port: 6379
     database: 1

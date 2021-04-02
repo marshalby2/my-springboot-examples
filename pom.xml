@@ -92,6 +92,9 @@
 
         <!--   message     -->
         <module>springboot-rabbitmq</module>
+        <!-- nacos -->
+        <module>springboot-nacos-config</module>
+        <module>springboot-nacos-discovery</module>
 
 
     </modules>
