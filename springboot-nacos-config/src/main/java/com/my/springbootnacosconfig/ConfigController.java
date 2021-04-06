@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("config")
 public class ConfigController {
 
+    // 通过 Nacos 的 @NacosValue 注解设置属性值
     @NacosValue(value = "${useLocalCache:false}", autoRefreshed = true)
     private boolean useLocalCache;
 
