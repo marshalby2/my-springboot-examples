@@ -23,8 +23,8 @@ import java.util.Objects;
  * @author YangYunbo
  * @version 2021-06-08
  */
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class OperationLogAspect extends CommonPoints {
 
     @Autowired
