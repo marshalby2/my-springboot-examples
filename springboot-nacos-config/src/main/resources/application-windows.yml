@@ -1,0 +1,7 @@
+# Ubuntu子系统运行的Nacos，注册地址不是localhost，IP是动态的。。。
+nacos:
+  config:
+    server-addr: 172.31.124.19:8848
+
+server:
+  port: 8081

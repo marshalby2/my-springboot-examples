@@ -45,7 +45,7 @@ public class MpUserController {
     @PostMapping("/saveOrUpdate")
     @ApiOperation(value = "更新或保存")
     public R saveOrUpdate(@RequestBody MpUser user){
-        return R.ok(this.service.saveOrUpdate(user));
+        return R.ok(this.service.save(user));
     }
 
     @DeleteMapping("/delete/{id}")
@@ -53,8 +53,5 @@ public class MpUserController {
     public R logicDelete(@PathVariable("id") Long id) {
        return R.ok( this.service.removeById(id));
     }
-
-
-
 
 }

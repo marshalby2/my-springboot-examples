@@ -14,6 +14,10 @@
     <name>my-springboot-examples</name>
     <packaging>pom</packaging>
 
+    <properties>
+        <mybatis-plus.version>3.4.2</mybatis-plus.version>
+    </properties>
+
     <dependencies>
         <!-- swagger -->
         <dependency>
@@ -95,6 +99,7 @@
         <!-- nacos -->
         <module>springboot-nacos-config</module>
         <module>springboot-nacos-discovery</module>
+        <module>springboot-aop</module>
 
 
     </modules>
